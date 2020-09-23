@@ -322,17 +322,12 @@
     border-color: transparent;
   }
 
-  #welcome-msg-container {
-    padding-bottom: 0px;
-  }
-
-  #welcome-msg {
-    margin-top: 0;
-  }
-
   /*---------------------------------------
       HOME  & SLIDER            
   -----------------------------------------*/
+  #slideshow {
+    margin-top: 100px;
+  }
 
   #home {
     padding: 0;
@@ -373,10 +368,8 @@
     background-repeat: no-repeat;
     background-attachment: local;
     background-size: cover;
-    /* height: 500px; */
-
-    width: 80%;
-    height: 500px;
+    width: 100%;
+    height: 600px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -385,74 +378,42 @@
   .caption h3 a:hover { color: #FF3; }
 
   .home-slider .item-first {
-    background-image: url(../images/logo.png);
+    background-image: url(../images/slideshow/logo.png);
     width: 500px;
     height: 500px;
-  /* width: 100%; */
-  /* margin-left: auto;
-  margin-right: auto; */
   }
 
   .home-slider .item-second {
-    background-image: url(../images/neuron.jpg);
-    /* width: 800px;
-    margin-left: auto;
-    margin-right: auto; */
-    /* margin-top: 50px; */
+    background-image: url(../images/slideshow/neuron.jpg);
   }
 
   .home-slider .item-third {
-    background-image: url(../images/chemistry.jpg);
-    /* width: 800px; */
-    /* width: 100%;
-    height: 650px;
-    margin-left: auto;
-    margin-right: auto; */
+    background-image: url(../images/slideshow/chemistry.jpg);
   }
 
   .home-slider .item-fourth {
-    background-image: url(../images/online_edu.jpg);
-    /* width: 500px;
-    margin-left: auto;
-    margin-right: auto; */
+    background-image: url(../images/slideshow/online_edu.jpg);
   }
 
   .home-slider .item-fifth {
-    background-image: url(../images/cells.jpg);
-    /* width: 800px;
-    margin-left: auto;
-    margin-right: auto; */
+    background-image: url(../images/slideshow/cells.jpg);
   }
 
   .home-slider .item-sixth {
-    background-image: url(../images/skeleton.jpg);
-    /* width: 800px;
-    margin-left: auto;
-    margin-right: auto; */
+    background-image: url(../images/slideshow/skeleton.jpg);
   }
 
   .home-slider .item-seventh {
-    background-image: url(../images/astronomy.jpg);
-    /* width: 800px;
-    margin-left: auto;
-    margin-right: auto; */
+    background-image: url(../images/slideshow/astronomy.jpg);
   }
 
   .home-slider .item-eight {
-    background-image: url(../images/computer_hardware.jpg);
-    /* width: 800px;
-    margin-left: auto;
-    margin-right: auto; */
+    background-image: url(../images/slideshow/computer_hardware.jpg);
   }
 
   .home-slider .item-ninth {
-    background-image: url(../images/programming.jpg);
-    /* width: 800px;
-    margin-left: auto;
-    margin-right: auto; */
+    background-image: url(../images/slideshow/programming.jpg);
   }
-
-
 
   /*---------------------------------------
       ABOUT US              
@@ -469,6 +430,7 @@
     border-radius: 15px;
     font-size: 2rem;
     text-align: center;
+    box-shadow:-4px 4px 8px #ec9595;
   }
 
   .feature-thumb h3 {
@@ -492,6 +454,50 @@
     width: 100px;
     margin: auto;
   }
+
+  .flip-card {
+    background-color: transparent;
+    height: 350px;
+    perspective: 2000px; 
+    vertical-align: middle;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    cursor: pointer;
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+  }
+  
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+  
+  .card-title {
+    margin-top: 15% !important;
+  }
+  
+  .card-text {
+    margin-top: 10% !important;
+  }  
 
   /*---------------------------------------
      FOOTER              
@@ -752,4 +758,5 @@
       height: inherit;
     }
   }
+
   
